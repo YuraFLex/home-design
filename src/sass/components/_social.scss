@@ -1,0 +1,28 @@
+.social-title {
+  font-size: 22px;
+}
+
+.social-list {
+  display: flex;
+  gap: 25px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  display: block;
+  fill: #737373;
+  width: 30px;
+  height: 30px;
+
+  transition: fill 250ms linear;
+
+  &:hover {
+    fill: $acent-color;
+  }
+}

@@ -1,0 +1,148 @@
+.corusel {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  padding: 50px 20px;
+  //   gap: 30px;
+}
+
+.slider-content {
+  max-width: 950px;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $primary-text-color;
+  border-radius: 17px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+  font-weight: 600;
+  transition: all 0.5s;
+  display: flex;
+}
+
+.corusel .slick-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  z-index: 10000;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.corusel .slick-arrow.slick-prev {
+  @media screen and (min-width: 768px) {
+    left: 15%;
+    background: url('../images/arrow-prev.svg') 0 50% / 100% no-repeat;
+  }
+}
+
+.corusel .slick-arrow.slick-next {
+  @media screen and (min-width: 768px) {
+    background: url('../images/arrow-next.svg') 0 50% / 100% no-repeat;
+
+    right: 15%;
+  }
+
+  // background: url(../images/feedback/arrow-right.png) 0 0 / 100% no-repeat;
+}
+
+.slick-slide.slick-current.slick-active .slider__image img {
+  border: 2px solid $primary-text-color;
+  border-radius: 50%;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.slider-title {
+  margin-bottom: 30px;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+}
+/* Лента слайдов */
+.slick-track {
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.corusel .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.corusel .slick-dots li {
+  list-style: none;
+  margin-right: 15px;
+}
+/* Активная точка */
+.corusel .slick-dots li.slick-active button {
+  background-color: $acent-color;
+}
+/* Элемент точки */
+.corusel .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(242, 169, 80, 0.5);
+  border-radius: 50%;
+  border: transparent;
+}
+
+.slider-img {
+  opacity: 0.7;
+  margin: 0 auto;
+}

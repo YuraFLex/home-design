@@ -1,0 +1,28 @@
+// Base styles
+@import './base/reset';
+@import './base/color-scheme';
+@import './base/body';
+@import './base/fonts';
+
+//Conponents
+@import './components/section';
+@import './components/container';
+@import './components/social';
+@import './components/logo';
+@import './components/btn';
+@import './components/section-title';
+@import './components/modal';
+
+// Utils
+@import './utils/animate';
+
+// Layout
+@import './layouts/header';
+@import './components/mobile-menu';
+@import './layouts/hero';
+@import './layouts/services';
+@import './layouts/privileg';
+@import './layouts/about';
+@import './layouts/questions';
+@import './layouts/reviews';
+@import './layouts/footer';

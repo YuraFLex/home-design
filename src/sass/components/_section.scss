@@ -1,0 +1,25 @@
+.section {
+  padding-top: 50px;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 100px;
+  }
+}
+
+.section-no-padding {
+  padding-top: 0;
+}
+
+.section-bg--hero {
+  background-image: url(../images/hero-bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 100px;
+  height: 750px;
+}
+
+.section-bg--privileg {
+  background: #e8e8e8;
+  padding-bottom: 100px;
+}

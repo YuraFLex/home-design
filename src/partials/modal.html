@@ -1,0 +1,96 @@
+<!-- Модалка -->
+
+<div class="back-drop is-hidden" data-modal>
+  <div class="modal">
+    <div class="modal-content">
+      <button data-modal-close class="btn-modal">
+        <svg class="btn-modal-icon">
+          <use href="./images/sprite.svg#close-mobile"></use>
+        </svg>
+      </button>
+      <h2 class="modal-title">Залиште свої данні, ми з Вами зв'яжемося</h2>
+      <form class="modal-form">
+        <ul class="modal-list list">
+          <li class="modal-form-item">
+            <label class="modal-form-label">
+              І'мя
+              <input
+                class="modal-form-input"
+                type="text"
+                name="user-name"
+                required
+                minlength="2"
+                autocomplete="off"
+                pattern="[A-Za-zА-Яа-яґҐЁёІіЇїЄє'’ʼ\s-]{2,20}{2,50}"
+                placeholder="Ім'я Призвище"
+              />
+              <svg class="modal-icon">
+                <use href="./images/sprite.svg#person"></use>
+              </svg>
+            </label>
+          </li>
+          <li class="modal-form-item">
+            <label class="modal-form-label"
+              >Телефон
+              <input
+                class="modal-form-input"
+                name="phone-number"
+                type="tel"
+                id="uPhone"
+                required
+                minlength="10"
+                maxlength="10"
+                pattern="[\+]\d{3}\s[\(]\d{2}[\)]\-\d{3}[\-]\d{2}[\-]\d{2}"
+                autocomplete="off"
+                placeholder="0631234567"
+              />
+              <svg class="modal-icon">
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
+            </label>
+          </li>
+          <li class="modal-form-item">
+            <label class="modal-form-label"
+              >Пошта
+              <input
+                class="modal-form-input"
+                type="email"
+                name="user-email"
+                autocomplete="off"
+                required
+                placeholder="example@yourmail.com"
+              />
+              <svg class="modal-icon">
+                <use href="./images/sprite.svg#email"></use>
+              </svg>
+            </label>
+          </li>
+          <li class="modal-form-item">
+            <label class="modal-form-label"
+              >Коментар
+              <textarea
+                class="modal-form-input comment-input"
+                name="comment"
+                placeholder="Залиште свій коментар"
+              ></textarea>
+            </label>
+          </li>
+        </ul>
+
+        <label class="checkbox-label">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="topic"
+            value="confirm"
+          />
+          <!-- <span class="checkbox-icon"></span>
+          <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
+          <a class="checkbox-link" href="">Условия договора</a> -->
+        </label>
+
+        <button class="btn" type="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+</div>

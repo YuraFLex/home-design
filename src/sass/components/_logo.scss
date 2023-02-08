@@ -1,0 +1,14 @@
+.logo {
+  color: $primary-text-color;
+  font-family: 'VivaldiD';
+  transition: color 250ms linear;
+  font-size: 25px;
+
+  &:hover {
+    color: $acent-color;
+  }
+
+  @media screen and(min-width: 1240px) {
+    font-size: 55px;
+  }
+}
