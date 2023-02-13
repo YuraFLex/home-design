@@ -10,11 +10,11 @@ const err = document.getElementById('err');
 document.getElementById('tg').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  let message = `<b>Home Design Заявка с сайта!</b>\n`;
-  message += `<b>Имя:</b> ${this.name.value}\n`;
+  let message = `<b>Нова заявка з сайту!</b>\n`;
+  message += `<b>Імʼя:</b> ${this.name.value}\n`;
   message += `<b>Телефон:</b> ${this.tel.value}\n`;
   message += `<b>Пошта:</b> ${this.email.value}\n`;
-  message += `<b>Коментарий:</b> ${this.comment.value}`;
+  message += `<b>Комментар:</b> ${this.comment.value}`;
 
   axios
     .post(URL_API, {
