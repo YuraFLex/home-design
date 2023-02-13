@@ -9,7 +9,7 @@
         </svg>
       </button>
       <h2 class="modal-title">Залиште свої данні, ми з Вами зв'яжемося</h2>
-      <form class="modal-form">
+      <form id="tg" class="modal-form">
         <ul class="modal-list list">
           <li class="modal-form-item">
             <label class="modal-form-label">
@@ -17,7 +17,7 @@
               <input
                 class="modal-form-input"
                 type="text"
-                name="user-name"
+                name="name"
                 required
                 minlength="2"
                 autocomplete="off"
@@ -34,9 +34,8 @@
               >Телефон
               <input
                 class="modal-form-input"
-                name="phone-number"
+                name="tel"
                 type="tel"
-                id="uPhone"
                 required
                 minlength="10"
                 maxlength="10"
@@ -55,7 +54,7 @@
               <input
                 class="modal-form-input"
                 type="email"
-                name="user-email"
+                name="email"
                 autocomplete="off"
                 required
                 placeholder="example@yourmail.com"
@@ -88,7 +87,8 @@
           <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
           <a class="checkbox-link" href="">Условия договора</a> -->
         </label>
-
+        <div id="success" style="display: none" role="alert"></div>
+        <div id="err" style="display: none" role="alert"></div>
         <button class="btn" type="submit">Надіслати</button>
       </form>
     </div>
