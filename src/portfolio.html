@@ -22,7 +22,12 @@
   </head>
   <body>
     <!-- <include src="./partials/modal.html"></include> -->
-    <header class="header scrollto" id="header">
+    <header
+      class="header scrollto"
+      id="header"
+      data-aos="zoom-out-down"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="header-wrapper">
           <nav>
@@ -42,7 +47,7 @@
             </ul>
           </nav>
 
-          <a class="logo link" href="./index.html">Home Design</a>
+          <a class="logo link" href="#portfolio">Home Design</a>
 
           <ul class="contact-list list">
             <li class="contact-item">
@@ -183,5 +188,10 @@
       </section>
     </main>
     <include src="./partials/footer.html"></include>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -7,14 +7,50 @@ const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 const success = document.getElementById('success');
 const error = document.getElementById('err');
 
-document.getElementById('tg').addEventListener('submit', function (e) {
+// Функция отправки сообщения в Telegram
+async function sendMessage(message) {
+  try {
+    await axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    });
+
+    success.innerHTML = 'Повідомлення надіслано';
+    success.style.display = 'block';
+
+    setTimeout(() => {
+      success.style.display = 'none';
+    }, 3000);
+  } catch (error) {
+    console.error(error);
+    showError();
+  }
+}
+
+// Функция проверки полей ввода
+function validateForm(name, tel, email) {
+  if (!name.value || !tel.value || !email.value) {
+    showError('Заповніть, будь ласка, всі поля форми');
+    return false;
+  }
+
+  return true;
+}
+
+// Функция обработки ошибок
+function showError(errorMessage = 'Упс, виникла помилка...') {
+  error.innerHTML = errorMessage;
+  error.style.display = 'block';
+}
+
+// Обработчик отправки формы
+function handleSubmit(e) {
   e.preventDefault();
 
   const { name, tel, email, comment } = e.target.elements;
 
-  if (!name.value || !tel.value || !email.value) {
-    error.innerHTML = 'Заповніть, будь ласка, всі поля форми';
-    error.style.display = 'block';
+  if (!validateForm(name, tel, email)) {
     return;
   }
 
@@ -25,22 +61,13 @@ document.getElementById('tg').addEventListener('submit', function (e) {
     `<b>Пошта:</b> ${email.value}\n` +
     `<b>Комментар:</b> ${comment.value}`;
 
-  try {
-    const response = axios.post(URL_API, {
-      chat_id: CHAT_ID,
-      parse_mode: 'html',
-      text: message,
-    });
+  sendMessage(message);
 
-    name.value = '';
-    tel.value = '';
-    email.value = '';
-    comment.value = '';
-    success.innerHTML = 'Повідомлення надіслано';
-    success.style.display = 'block';
-  } catch (error) {
-    console.error(error);
-    error.innerHTML = 'Упс, виникла помилка...';
-    error.style.display = 'block';
-  }
-});
+  name.value = '';
+  tel.value = '';
+  email.value = '';
+  comment.value = '';
+}
+
+document.getElementById('tg').addEventListener('submit', handleSubmit);
+document.getElementById('tg-about').addEventListener('submit', handleSubmit);
