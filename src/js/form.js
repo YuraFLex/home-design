@@ -7,7 +7,9 @@ const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 const success = document.getElementById('success');
 const error = document.getElementById('err');
 
-// Функция отправки сообщения в Telegram
+const successAbout = document.getElementById('success-about');
+const errorAbout = document.getElementById('err-about');
+
 async function sendMessage(message) {
   try {
     await axios.post(URL_API, {
@@ -19,16 +21,19 @@ async function sendMessage(message) {
     success.innerHTML = 'Повідомлення надіслано';
     success.style.display = 'block';
 
+    successAbout.innerHTML = 'Повідомлення надіслано';
+    successAbout.style.display = 'block';
+
     setTimeout(() => {
       success.style.display = 'none';
-    }, 3000);
+      successAbout.style.display = 'none';
+    }, 5000);
   } catch (error) {
     console.error(error);
     showError();
   }
 }
 
-// Функция проверки полей ввода
 function validateForm(name, tel, email) {
   if (!name.value || !tel.value || !email.value) {
     showError('Заповніть, будь ласка, всі поля форми');
@@ -38,13 +43,11 @@ function validateForm(name, tel, email) {
   return true;
 }
 
-// Функция обработки ошибок
 function showError(errorMessage = 'Упс, виникла помилка...') {
   error.innerHTML = errorMessage;
   error.style.display = 'block';
 }
 
-// Обработчик отправки формы
 function handleSubmit(e) {
   e.preventDefault();
 
