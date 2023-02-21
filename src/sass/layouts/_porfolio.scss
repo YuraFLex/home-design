@@ -21,7 +21,11 @@
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  width: calc((100% - 30px) / 2);
+  width: 100%;
+
+  @media screen and (min-width: 838px) {
+    width: calc((100% - 30px) / 2);
+  }
 
   &:hover .portfolio-inner {
     bottom: 0;
@@ -38,6 +42,5 @@
   left: 0;
   padding: 10px 20px;
   background-color: #f2a9509e;
-
   transition: all 250ms ease-in-out;
 }
