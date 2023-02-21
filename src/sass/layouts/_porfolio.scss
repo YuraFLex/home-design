@@ -37,7 +37,7 @@
 }
 
 .portfolio-img {
-  transition: all 500ms linear;
+  transition: all 700ms linear;
 }
 
 // .portfolio-link {
@@ -49,6 +49,8 @@
   bottom: -100%;
   left: 0;
   padding: 10px 20px;
-  background-color: #f2a9509e;
+  background-color: rgba(33, 33, 33, 0.7);
+
+  backdrop-filter: blur(12px);
   transition: all 250ms ease-in-out;
 }
