@@ -17,9 +17,18 @@
   background-position: center;
   padding-bottom: 100px;
   height: 750px;
+  padding-top: 200px;
 }
 
 .section-bg--privileg {
   background: #e8e8e8;
   padding-bottom: 100px;
+}
+
+.section-portfolio {
+  padding-top: 100px;
+
+  @media screen and (min-width: 1241px) {
+    padding-top: 200px;
+  }
 }

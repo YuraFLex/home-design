@@ -1,3 +1,23 @@
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  background-color: $prinmary-bg-color;
+
+  transition: background-color 500ms ease-in, backdrop-filter 500ms ease-in;
+
+  &.fixed {
+    background-color: rgba(40, 36, 36, 0.6);
+    backdrop-filter: blur(12px);
+
+    & .header-wrapper {
+      color: $primary-text-color;
+    }
+  }
+}
+
 .header-wrapper {
   display: none;
 

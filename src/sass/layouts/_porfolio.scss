@@ -1,0 +1,42 @@
+.current-page {
+  color: $primary-text-color;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid $acent-color;
+    transition: width 250ms linear;
+  }
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  width: calc((100% - 30px) / 2);
+
+  &:hover .portfolio-inner {
+    bottom: 0;
+  }
+}
+
+// .portfolio-link {
+//   position: relative;
+// }
+
+.portfolio-inner {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 10px 20px;
+  background-color: #f2a9509e;
+
+  transition: all 250ms linear;
+}
