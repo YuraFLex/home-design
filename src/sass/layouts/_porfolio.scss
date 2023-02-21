@@ -27,9 +27,17 @@
     width: calc((100% - 30px) / 2);
   }
 
+  &:hover .portfolio-img {
+    scale: 1.3;
+  }
+
   &:hover .portfolio-inner {
     bottom: 0;
   }
+}
+
+.portfolio-img {
+  transition: all 500ms linear;
 }
 
 // .portfolio-link {
