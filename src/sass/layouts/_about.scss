@@ -12,9 +12,12 @@
 }
 
 .about-inner {
-  margin: 0 auto;
   padding: 50px 0;
-  width: 65vw;
+
+  @media screen and (min-width: 768px) {
+    width: 65vw;
+    margin: 0 auto;
+  }
 }
 
 .about-wrapper {
@@ -25,7 +28,7 @@
   background: linear-gradient(135deg, #262626 0%, #0d0d0d 100%);
   border: 1px solid #595959;
   backdrop-filter: blur(12px);
-  padding: 20px 40px;
+  padding: 20px;
   max-width: 450px;
   display: flex;
   flex-direction: column;
@@ -44,6 +47,10 @@
     width: 10px;
     height: 100%;
     background: #f2a95085;
+  }
+
+  @media screen and(min-width: 768px) {
+    padding: 20px 40px;
   }
 }
 
