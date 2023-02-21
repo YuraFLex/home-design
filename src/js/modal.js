@@ -1,11 +1,9 @@
 const openModalBtn = document.querySelector('[data-modal-open]');
-const openModalBtnMobile = document.querySelector('[data-modal-open-mobile');
 const closeModalBtn = document.querySelector('[data-modal-close]');
 const modal = document.querySelector('[data-modal]');
 const body = document.querySelector('[data-body]');
 
 openModalBtn.addEventListener('click', toggleModal);
-openModalBtnMobile.addEventListener('click', toggleModal);
 closeModalBtn.addEventListener('click', toggleModal);
 
 export function toggleModal() {
@@ -25,17 +23,7 @@ export function closeByKeybord(value) {
 }
 
 modal.addEventListener('click', e => {
-  if (!e.target.closest('.back-drop')) {
+  if (e.target.classList.contains('back-drop')) {
     toggleModal();
   }
 });
-
-// const formSubmit = document
-//   .querySelector('.btn')
-//   .addEventListener('click', () => {
-//     preventDefault();
-//     let data = document.querySelector('.modal-form-input');
-//     console.log(data.value);
-//   });
-
-// console.log(formSubmit.value);

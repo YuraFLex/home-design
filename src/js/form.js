@@ -5,38 +5,42 @@ const CHAT_ID = '-1001374769076';
 const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 const success = document.getElementById('success');
-const err = document.getElementById('err');
+const error = document.getElementById('err');
 
 document.getElementById('tg').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  let message = `<b>Нова заявка з сайту!</b>\n`;
-  message += `<b>Імʼя:</b> ${this.name.value}\n`;
-  message += `<b>Телефон:</b> ${this.tel.value}\n`;
-  message += `<b>Пошта:</b> ${this.email.value}\n`;
-  message += `<b>Комментар:</b> ${this.comment.value}`;
+  const { name, tel, email, comment } = e.target.elements;
 
-  axios
-    .post(URL_API, {
+  if (!name.value || !tel.value || !email.value) {
+    error.innerHTML = 'Заповніть, будь ласка, всі поля форми';
+    error.style.display = 'block';
+    return;
+  }
+
+  const message =
+    `<b>Нова заявка з сайту!</b>\n` +
+    `<b>Ім'я:</b> ${name.value}\n` +
+    `<b>Телефон:</b> ${tel.value}\n` +
+    `<b>Пошта:</b> ${email.value}\n` +
+    `<b>Комментар:</b> ${comment.value}`;
+
+  try {
+    const response = axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: 'html',
       text: message,
-    })
-    .then(res => {
-      this.name.value = '';
-      this.tel.value = '';
-      this.email.value = '';
-      this.comment.value = '';
-      success.innerHTML = 'Сообщение отправлено';
-      success.style.display = 'block';
-    })
-    .catch(res => {
-      err.innerHTML = 'Упс, виникла помилка...';
-      err.style.display = 'block';
-    })
-    .finally(res => {
-      //   console.log('End');
     });
 
-  console.log(message);
+    name.value = '';
+    tel.value = '';
+    email.value = '';
+    comment.value = '';
+    success.innerHTML = 'Повідомлення надіслано';
+    success.style.display = 'block';
+  } catch (error) {
+    console.error(error);
+    error.innerHTML = 'Упс, виникла помилка...';
+    error.style.display = 'block';
+  }
 });

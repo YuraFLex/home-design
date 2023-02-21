@@ -1,14 +1,18 @@
 .hero-inner {
   max-width: 750px;
-  padding: 50px;
   color: $primary-text-color;
   border-radius: 8px;
   background: $hero-bg-color;
+  padding: 30px 15px;
 
   @media screen and (max-width: 839px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 840px) {
+    padding: 50px;
   }
 }
 

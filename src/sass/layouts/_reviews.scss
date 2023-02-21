@@ -35,17 +35,17 @@
 }
 
 .corusel .slick-arrow.slick-prev {
-  @media screen and (min-width: 768px) {
-    left: 15%;
+  @media screen and (min-width: 1024px) {
+    left: 3%;
     background: url('../images/arrow-prev.svg') 0 50% / 100% no-repeat;
   }
 }
 
 .corusel .slick-arrow.slick-next {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     background: url('../images/arrow-next.svg') 0 50% / 100% no-repeat;
 
-    right: 15%;
+    right: 3%;
   }
 
   // background: url(../images/feedback/arrow-right.png) 0 0 / 100% no-repeat;
