@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфоліо Home Design</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./potrolio.js"></script>
+  </head>
+  <body>
+    <!-- <include src="./partials/modal.html"></include> -->
+    <header
+      class="header scrollto"
+      id="header"
+      data-aos="zoom-out-down"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <div class="header-wrapper">
+          <nav>
+            <ul class="list nav-list">
+              <li class="nav-item">
+                <a class="nav-link current-page link" href="./portfolio.html">
+                  Портфоліо
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="./index.html"> Головна </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link link" href="#footer"> Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="logo link" href="#portfolio">Home Design</a>
+
+          <ul class="contact-list list">
+            <li class="contact-item">
+              <a class="contact-link link" href="mailto:example@gmail.com">
+                <svg class="contact-icon">
+                  <use href="./images/sprite.svg#email"></use>
+                </svg>
+                example@gmail.com
+              </a>
+            </li>
+            <li class="contact-item">
+              <a class="contact-link link" href="tel:+380631234567">
+                <svg class="contact-icon">
+                  <use href="./images/sprite.svg#phone"></use>
+                </svg>
+                +38 063 765 43 21</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile-menu -->
+
+        <div class="mobile-menu">
+          <div class="mobile-menu__box-nav">
+            <a class="logo link" href="#portfolio">Home Design</a>
+            <button class="mobile-btn" data-menu-open>
+              <svg class="mobile-menu__icon">
+                <use href="./images/sprite.svg#menu-mobile"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu__content" data-menu>
+            <button class="mobile-btn btn-close" data-menu-close>
+              <svg class="mobile-menu__icon">
+                <use href="./images/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__nav-list list">
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link link" href="./index.html"
+                  >Головна</a
+                >
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a
+                  class="mobile-menu__nav-link current-page link"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link link" href="#footer"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="portfolio" class="section section-portfolio">
+        <div class="container">
+          <h1 class="title">Баня Терновка</h1>
+
+          <ul class="portfolio-list list">
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/1.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/2.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/3.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/4.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/5.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/6.jpg"
+                alt="default picture"
+              />
+            </li>
+            <li>
+              <img
+                class="portfolio-img"
+                src="./images/portfolio/banya/7.jpg"
+                alt="default picture"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <include src="./partials/footer.html"></include>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
